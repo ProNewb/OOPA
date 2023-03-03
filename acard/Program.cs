@@ -27,6 +27,15 @@ namespace acard
                     Console.WriteLine("You entered an invalid option, please enter either; 1, 2, or 3 thankyou");
                      shuffle = Console.ReadLine();
 
+
+                }
+                if (Pack.ShuffleCardPack(shuffleType) == true)
+                {
+                    Pack.shuffleType(cards, shuffleType);
+foreach (Card card in cards)
+                    { Console.WriteLine(card.aface); }
+
+
                 }
             }
             catch { }
