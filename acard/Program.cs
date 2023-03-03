@@ -15,10 +15,12 @@ namespace acard
             testPack.deck();
             testPack.TestPack();
             List<Card> cards = new List<Card>();
+            testPack.fisher();
+            //  foreach (Card card in testPack.deck())
 
             Console.WriteLine("Please select a shuffle type, the choices are as follows;\n please enter;\n 1 for the x shuffle\n 2 for the y shuffle\n 3 for no shuffle");
-            try
-            {
+            //try
+           // {
                 string shuffle = Console.ReadLine();
                 int shuffleType =  Convert.ToInt32(shuffle);
                 ;
@@ -29,16 +31,20 @@ namespace acard
 
 
                 }
-                if (Pack.ShuffleCardPack(shuffleType) == true)
-                {
-                    Pack.shuffleType(cards, shuffleType);
-foreach (Card card in cards)
-                    { Console.WriteLine(card.aface); }
 
 
-                }
-            }
-            catch { }
+               // if (Pack.ShuffleCardPack(shuffleType) == true)
+                //{
+                    
+
+               /* foreach (Card card in pack)
+                        Pack.shuffleType(1)
+                    { Console.WriteLine(pack.aface); }
+
+                    */
+               // }
+           // }
+           // catch { }
             /* foreach (Card i in d)
             {
                 Console.WriteLine(d.f);

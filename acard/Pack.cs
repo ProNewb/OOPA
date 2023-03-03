@@ -11,7 +11,7 @@ namespace acard
     internal class Pack
     {
         public List<Card> apack;
-
+        public int typeOfShuffle;
 
 
         //public Pack()
@@ -56,22 +56,37 @@ namespace acard
         }
 
 
-        public static void shuffleType(List<Card> pack, int typeOfShuffle)
-        {  
-            if (typeOfShuffle == 1)
-            {
-                Card temp;
-                // List<Card> pack;
-                Random random = new Random();
-                int n = 52;
+        public void shuffleType(int typeOfShuffle)
+        { }
+           // if ()};
 
-
-                for (int i = 0; i < (n - 1); i++)
+             public void fisher()
                 {
-                    int j = i + random.Next(n);
-                    temp = pack[i];
-                    pack[i] = pack[j];
-                    pack[j] = temp;
+                    Card temp;
+            Card temp2;
+
+                    Random random = new Random();
+                    int n = 52;
+
+
+                    for (int i = 0; i < n-1; i++)
+                   //foreach (Card c in pack)
+                    {
+                        int j = random.Next(n-1);
+                        int k = random.Next(n-1);
+                        temp = pack[k];
+                        temp2 = pack[j];
+                        pack.RemoveAt(k);
+                        pack[k] = pack[j];
+                pack.RemoveAt(j);  
+                        pack[j] = temp;
+
+                        foreach (Card d in pack)
+                        {
+
+                            Console.WriteLine(d.aface);
+                        }
+                    }
                 }
 
 
@@ -80,6 +95,5 @@ namespace acard
 
         }
 
-    }
-}
+    
   
