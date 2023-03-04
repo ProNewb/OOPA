@@ -68,25 +68,25 @@ namespace acard
 
                     Random random = new Random();
                     int n = 51;
-           // Pack shuffledPack = new Pack();
+            // Pack shuffledPack = new Pack();
 
             for (int i = 0; i < 1; i++)
-            
+
                 foreach (Card c in pack.pack)
                 {
-                   // int j = random.Next(n - 1);
+                    // int j = random.Next(n - 1);
                     int k = random.Next(n - 1);
                     temp = pack.pack[k];
-                   // temp2 = pack.pack[j];
+                    // temp2 = pack.pack[j];
 
                     //pack.pack[k] = pack.pack[j];
 
                     shuffledPack.Insert(0, temp);
-                    
-                    
-                    Console.WriteLine(pack.pack[0].value);
-                    
-                    
+
+
+                    //Console.WriteLine(pack.pack[0].value);
+
+                }
                     foreach (Card d in shuffledPack)
                     {
 
@@ -94,7 +94,7 @@ namespace acard
                     }
                 }
             
-                }
+                
 
         public static Card deal(Pack pack)
         {
@@ -113,13 +113,21 @@ namespace acard
             {
                 //pack.pack[i].ToList();
                 Pack.playerHand.Add(pack.pack[Ind]);
-                foreach (Card c in playerHand)
+                Console.WriteLine(Pack.playerHand[Ind].aface);
+                Ind++;
+
+            }
+            return playerHand;
+           
+            
+            /* Ind = 0;
+                foreach (Card c in playerHand) { 
                 Console.WriteLine(Pack.playerHand[Ind].aface);
                 //pack.pack.Remove(pack.pack[0]);
                 Ind++;
-            } 
+            }*/ 
         
-        return playerHand;
+        
         }
 
     }
