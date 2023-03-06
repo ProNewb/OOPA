@@ -25,8 +25,8 @@ namespace acard
 
                  faceVal = value.ToString();
                  faceSuit = suit.ToString();
-            // string aface = faceVal + " of " + faceSuit;
-
+            
+            //Non numerical cards and suit settings
             if (suit == 0)
             { faceSuit = "Hearts"; }
 
@@ -63,7 +63,7 @@ namespace acard
                     default: faceVal = value.ToString();
                     break;
             }
-            aface = faceVal + " of " + faceSuit;  // Console.WriteLine(aface);
+            aface = faceVal + " of " + faceSuit;  
 
         }
 
