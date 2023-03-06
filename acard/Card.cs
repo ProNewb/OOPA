@@ -5,27 +5,27 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 ///OOP assignment 1///
-namespace acard
+namespace CMP1903M_A01_2223
 {
     internal class Card
     {
-            public int suit { get; set; }
-            public int value { get; set; }
+        public int suit { get; set; }
+        public int value { get; set; }
 
-            public   string faceVal;
-            
-            public  string faceSuit;
+        public string faceVal;
+
+        public string faceSuit;
 
 
-            public string aface;
-            public Card(int value, int suit)
-            {
-                this.value = value+1;
-                this.suit = suit;
+        public string aface;
+        public Card(int value, int suit)
+        {
+            this.value = value + 1;
+            this.suit = suit;
 
-                 faceVal = value.ToString();
-                 faceSuit = suit.ToString();
-            
+            faceVal = value.ToString();
+            faceSuit = suit.ToString();
+
             //Non numerical cards and suit settings
             if (suit == 0)
             { faceSuit = "Hearts"; }
@@ -45,7 +45,7 @@ namespace acard
 
 
             switch (faceVal)
-               // faceVal = faceVal switch
+            // faceVal = faceVal switch
             {
                 case "14":
                     faceVal = "Ace";
@@ -60,16 +60,17 @@ namespace acard
                 case "11":
                     faceVal = "Jack";
                     break;
-                    default: faceVal = value.ToString();
+                default:
+                    faceVal = value.ToString();
                     break;
             }
-            aface = faceVal + " of " + faceSuit;  
-
-        }
-
+            aface = faceVal + " of " + faceSuit;
 
         }
 
 
     }
+
+
+}
 

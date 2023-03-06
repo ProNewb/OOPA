@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
-namespace acard
+namespace CMP1903M_A01_2223
 {
     class Program
     {
@@ -71,7 +71,7 @@ namespace acard
 
 
 
-
+                Console.WriteLine("\n\n");
                 Console.WriteLine("Test of deal single card func\n");
 
 
