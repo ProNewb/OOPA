@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+﻿///OOP assignment 1///
+//class to create the deck of cards
 
 namespace CMP1903M_A01_2223
 {
@@ -46,7 +40,7 @@ namespace CMP1903M_A01_2223
             Console.WriteLine("\n\n");
         }
 
-        //Descide which shuffle to perform and validate input
+        //Decide which shuffle to perform and validate input
         public static bool ShuffleCardPack(in int typeOfShuffle)
         {
             if (typeOfShuffle != 1 || typeOfShuffle != 2 || typeOfShuffle != 3)
@@ -93,7 +87,7 @@ namespace CMP1903M_A01_2223
         }
 
 
-        public void riffle(Pack pack)
+        public void Riffle(Pack pack)
         {
 
             List<Card> TempPackA = new List<Card>();
@@ -124,7 +118,7 @@ namespace CMP1903M_A01_2223
         }
 
         //Dealing methods
-        public static Card deal(Pack pack)
+        public static Card Deal(Pack pack)
         {
             //Deals one card
             Card card;
@@ -132,7 +126,7 @@ namespace CMP1903M_A01_2223
             Console.WriteLine(card.aface);
             return card;
         }
-        public static List<Card> dealCard(int amount, Pack pack)
+        public static List<Card> DealCard(int amount, Pack pack)
         {
             //Deals the number of cards specified by 'amount'
 

@@ -1,7 +1,6 @@
 ﻿
-
-using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
+///OOP assignment 1///
+///main program///
 namespace CMP1903M_A01_2223
 {
     class Program
@@ -10,7 +9,7 @@ namespace CMP1903M_A01_2223
         {
             //Card Object
             Card testCard = new Card(2, 1);
-
+            // works as programmed
             Console.WriteLine("$Test to check a card object has been properly created\n\n" + "Int representing the suit {1}" + "   " + "The int representing value {2}" + "   " + "and finally its face values {3}" + "\n", "\n", testCard.suit, testCard.value, testCard.aface);
 
 
@@ -56,7 +55,7 @@ namespace CMP1903M_A01_2223
                 {
                     Console.WriteLine("Riffle shuffle");
                     Console.WriteLine("\n");
-                    testPack.riffle(testPack);
+                    testPack.Riffle(testPack);
                 }
                 else if (shuffleType == 3)
                 {
@@ -76,10 +75,10 @@ namespace CMP1903M_A01_2223
 
 
                 //Hand and single card methods
-                Pack.deal(testPack);
+                Pack.Deal(testPack);
                 Console.WriteLine("\n\n");
                 Console.WriteLine("Test of multi card deal\n");
-                Pack.dealCard(7, testPack);
+                Pack.DealCard(7, testPack);
 
             }
             catch (Exception e)

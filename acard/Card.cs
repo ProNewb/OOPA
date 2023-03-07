@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 ///OOP assignment 1///
+//Class to create a card object
 namespace CMP1903M_A01_2223
 {
     internal class Card
