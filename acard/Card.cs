@@ -1,10 +1,11 @@
 ﻿
 ///OOP assignment 1///
-//Class to create a card object
+//Class to encapsulate the creation of a card object
 namespace CMP1903M_A01_2223
 {
     internal class Card
     {
+        //basic attributes of my card object
         public int suit { get; set; }
         public int value { get; set; }
 
@@ -14,6 +15,7 @@ namespace CMP1903M_A01_2223
 
 
         public string aface;
+        //main constructor
         public Card(int value, int suit)
         {
             this.value = value + 1;
@@ -39,9 +41,9 @@ namespace CMP1903M_A01_2223
 
 
 
-
+            
             switch (faceVal)
-            // faceVal = faceVal switch
+            
             {
                 case "14":
                     faceVal = "Ace";
