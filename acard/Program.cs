@@ -31,42 +31,18 @@ namespace CMP1903M_A01_2223
             Console.WriteLine("\n\n");
 
 
-
+            //try block covers non int input errors
             try
             {
 
                 Console.WriteLine("Please enter yor preffered shuffle;\n The choices are as follows:\n enter 1 for a Fisher shuffle, 2 for Riffle and 3 for no shuffle");
                 int shuffleType = Convert.ToInt32(Console.ReadLine());
-
+                int shuffle = shuffleType;
                 //unused bool method left for future implementation
                 //int shuffle = shuffleType;
-                //Pack.ShuffleCardPack(shuffleType);
+                Pack.ShuffleCardPack(shuffleType, testPack);
 
-                if (shuffleType == 1)
-                {
-                    
-
-
-                    Console.WriteLine("Fisher shuffle");
-                    Console.WriteLine("\n");
-                    testPack.fisher(testPack);
-                }
-                else if (shuffleType == 2)
-                {
-                    Console.WriteLine("Riffle shuffle");
-                    Console.WriteLine("\n");
-                    testPack.Riffle(testPack);
-                }
-                else if (shuffleType == 3)
-                {
-                    Console.WriteLine("No shuffle\n");
-                    foreach (Card c in testPack.pack)
-                    {
-                        Console.WriteLine(c.aface);
-                    }
-                    Console.WriteLine("\n");
-                }
-                else { Environment.Exit(1); }
+                
 
 
 

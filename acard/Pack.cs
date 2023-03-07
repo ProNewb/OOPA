@@ -41,20 +41,51 @@ namespace CMP1903M_A01_2223
         }
 
         //Decide which shuffle to perform and validate input
-        public static bool ShuffleCardPack(in int typeOfShuffle)
+        public static bool ShuffleCardPack( int typeOfShuffle, Pack pack)
         {
-            if (typeOfShuffle != 1 || typeOfShuffle != 2 || typeOfShuffle != 3)
+    
+
+            if (typeOfShuffle == 1)
             {
-                return false;
+
+
+
+                Console.WriteLine("Fisher shuffle");
+                Console.WriteLine("\n");
+                Fisher(pack);
+                return true;
             }
-            else { Environment.Exit(1); return true; }
+            else if (typeOfShuffle == 2)
+            {
+                Console.WriteLine("Riffle shuffle");
+                Console.WriteLine("\n");
+                Riffle(pack);
+                return true;
+            }
+            else if (typeOfShuffle == 3)
+            {
+                Console.WriteLine("No shuffle\n");
+                foreach (Card c in pack.pack)
+                {
+                    Console.WriteLine(c.aface);
+                }
+                Console.WriteLine("\n");
+                return true;
+            }
+            //covers non valid int input
+            else
+            {
+                Console.WriteLine("Erroneous input\n Goodbye");
+                Environment.Exit(1); return true;
+            }
+           
         }
 
 
 
         //Shuffle specifics
 
-        public void fisher(Pack pack)
+        public static void Fisher(Pack pack)
         {
 
 
@@ -87,7 +118,7 @@ namespace CMP1903M_A01_2223
         }
 
 
-        public void Riffle(Pack pack)
+        public static void Riffle(Pack pack)
         {
 
             List<Card> TempPackA = new List<Card>();
@@ -110,10 +141,7 @@ namespace CMP1903M_A01_2223
             }
 
 
-            foreach (Card d in pack.pack)
-            {
-                Console.WriteLine(d.aface);
-            }
+
 
         }
 
