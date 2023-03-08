@@ -43,11 +43,19 @@ namespace acard
             }
             Console.WriteLine("\n\n");    
         }
-        public static bool shuffleCardPack(int typeOfShuffle)
-        { 
+
+       // public static bool shuffleCardPack(int typeOfShuffle)
+        //{ 
         
         
-        }
+        //}
+
+        // Marcus Sanghvi (26944375) - Peer Review
+        // Code is functional and prints out a pack of cards with all correct values (e.g 1 of Hearts)
+        // The spacing of the string values for cards in the command terminal could be organized better (e.g all in line)
+        // Some errors are handled when asking for which type of shuffle, however the error is only handled on the first instance then the program is closed.
+        // To improve I suggest a loop that keeps asking for input until the correct conditions are satisfied, or simply recall the main function.
+        // Add at least 1 shuffle function would be the best way to improve this code in my opinion.
 
     }
 }  
