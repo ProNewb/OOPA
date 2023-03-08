@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CMP1903M_A01_2223
-{
+{//As requested a test class
     internal class TestClass
-    {
+    {//main constructor
         public TestClass()
         {
             //Card Object

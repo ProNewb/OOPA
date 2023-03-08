@@ -7,7 +7,7 @@ namespace CMP1903M_A01_2223
     {
         static void Main(string[] args)
         {
-
+            //Every operation is encapsulated, this starts the program and points to the next locale
           TestClass  test = new TestClass();
 
         }
